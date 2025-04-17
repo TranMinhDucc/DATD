@@ -1,0 +1,406 @@
+/* ====== COMMON ====== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== HEADER ====== */
+.navbar_top_header {
+    background-color: #ffa276 !important;
+}
+
+.ecommerce-section {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.ecommerce-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1320px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.ecommerce-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ecommerce-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.ecommerce-title {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    color: #000;
+}
+
+.ecommerce-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    margin: 12px 0;
+}
+
+.ecommerce-description {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.scroll-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.scroll-icon:hover {
+    transform: translateY(4px);
+}
+
+/* Our Sevice  */
+.our-service-section {
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.our-service-container{
+    width: 1320px;
+}
+
+.our-service-title {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.our-service-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 30%;             /* Chính là độ dài của đường gạch */
+    height: 2px;
+    background-color: #000; /* Màu của đường gạch */
+}
+
+.service-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.service-card {
+    position: relative;
+    width: 330px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 20px 60px 20px; /* chừa chỗ cho nút ở đáy */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.border_icon_ecom{
+    width: 51px;
+    height: 51px;
+    background-color: #ffc7ad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-icon img {
+ 
+    
+    padding: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.service-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.service-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    transition: transform 0.3s;
+    margin-left: 5px;
+}
+
+.service-card:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Mặc định ẩn */
+.service-detail {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    width: max-content;
+    min-width: 350px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-toggle:hover + .service-detail {
+    display: block;
+}
+
+.service-card:hover .service-detail {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 16px;
+    padding: 20px;
+}
+
+.service-detail ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 14px;
+    columns: 1;
+}
+.service-card {
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.service-icon{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.service-icon > p {
+    margin: 0;
+}
+
+
+.service-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.service-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+.service-toggle {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #333;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Ẩn chi tiết mặc định */
+.service-detail {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    width: max-content;
+    min-width: 350px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Khi hover vào .service-info thì hiển thị .service-detail */
+.service-info:hover + .service-detail {
+    display: block;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* khoảng cách giữa icon và nội dung */
+}
+
+
+.service-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* WORKFLOW  */
+.workflow-section {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .workflow-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  
+  .workflow-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #FF6D2E;
+    margin: 0 auto 32px;
+    border-radius: 2px;
+  }
+  
+  .workflow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .workflow-step {
+    background-color: #f97316;
+    color: white;
+    width: 160px;
+    border-radius: 12px;
+    padding: 20px 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  .workflow-step:hover {
+    transform: translateY(-4px);
+  }
+  
+  .step-number {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .step-text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Team  */
+  
+  
+  /* ✅ Responsive */
+  @media (max-width: 1024px) {
+    .workflow-step {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .workflow-step {
+      width: 100%;
+    }
+  
+    .workflow-title {
+      font-size: 28px;
+    }
+  
+    .step-number {
+      font-size: 22px;
+    }
+  
+    .step-text {
+      font-size: 13px;
+    }
+  }
+  
+/* Responsive */
+@media (max-width: 768px) {
+    .ecommerce-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ecommerce-title {
+        font-size: 48px;
+    }
+
+    .ecommerce-subtitle {
+        font-size: 18px;
+    }
+
+    .ecommerce-description {
+        font-size: 14px;
+    }
+}

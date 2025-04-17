@@ -1,0 +1,68 @@
+.color_background_header {
+    background: linear-gradient(90deg, #fb99e7, #fc8782, #fcd797, #eb92a7);
+}
+
+.header-wrapper {
+    opacity: 0.6;
+    width: 1320px !important;
+    max-width: 100%;
+}
+
+.logo-text{
+    color: #AB6E6E;
+}
+/* CSS để đẩy mũi tên ra xa 2 bên */
+.splide__arrow--prev {
+    left: -80px; /* chỉnh khoảng cách bên trái */
+}
+
+.splide__arrow--next {
+    right: -80px; /* chỉnh khoảng cách bên phải */
+}
+
+/* Tùy chọn: tăng kích thước mũi tên nếu muốn */
+.splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.splide {
+    position: relative;
+}
+
+.splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.splide__arrow--prev {
+    left: -80px !important;
+}
+
+.splide__arrow--next {
+    right: -80px !important;
+}
+
+@media (max-width: 768px) {
+    .splide__arrow--prev {
+        left: -5px !important;
+    }
+
+    .splide__arrow--next {
+        right: -5px !important;
+    }
+}

@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== HEADER ====== */
+.navbar_top_header {
+    background-color: #ffa276 !important;
+}
+
+.logo-text {
+    color: #ab6e6e;
+}
+.title_menu {
+    font-size: 50px;
+}
+/* ====== NEWS SECTION ====== */
+.news-section {
+    background-color: #ffa276;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1320px;
+}
+
+.news-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.news-divider {
+    border: 1px solid white;
+    opacity: 0.6;
+    margin-bottom: 24px;
+}
+
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.news-item {
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-item.active,
+.news-item:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(4px);
+}
+.news-content {
+    position: relative; /* cần thiết để nút định vị theo .news-content */
+    background-color: white;
+    border-radius: 13px;
+    display: flex;
+    flex: 2;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* để ảnh và text không bị chồng */
+}
+.news-img {
+    width: 330px;
+    height: 300px;
+    border-radius: 13px;
+    object-fit: cover;
+}
+
+.news-text {
+    flex: 1;
+}
+
+.news-head {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.news-description {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.btn-readmore:hover {
+    opacity: 1;
+}
+
+.arrow {
+    margin-left: 6px;
+}
+
+.btn-readmore {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 10px 20px;
+    background-color: #ffa276;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+}
+
+
+.btn-readmore:hover {
+    opacity: 1;
+}
+
+.btn-readmore .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-readmore:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Scroll Button */
+.news-scroll-btn {
+    display: none;
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: #ff9c73;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ====== VIDEO SECTION ====== */
+.video-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.video-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto 24px;
+}
+
+.video-title {
+    font-size: 36px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+.video-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 1320px;
+    margin: auto;
+}
+
+.carousel-btn {
+    background-color: #ffecec;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #ffc0c0;
+}
+
+.video-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 12px;
+    min-width: 213px;
+    max-width: 213px;
+    flex-shrink: 0;
+    text-align: left;
+    position: relative;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 18px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.video-title-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+    margin: 8px 0 2px;
+}
+
+.video-views {
+    font-size: 10px;
+    color: #808080;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .news-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+
+    .news-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .news-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-list {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        width: 100%;
+        max-width: 100%;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .news-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .news-item {
+        min-width: 200px;
+        width: 200px;
+        white-space: nowrap; /* Không xuống dòng */
+        overflow: hidden; /* Ẩn phần vượt ra */
+        text-overflow: ellipsis;
+        margin-right: 12px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .news-scroll-btn {
+        background-color: #ffa276;
+        display: block;
+    }
+    .news-carousel {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .title_menu {
+        text-align: center;
+    }
+}
