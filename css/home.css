@@ -57,6 +57,10 @@
     right: -80px !important;
 }
 
+.sub_banner_home{
+    position: relative;
+}
+
 @media (max-width: 768px) {
     .splide__arrow--prev {
         left: -5px !important;
