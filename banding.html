@@ -19,14 +19,8 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/about.css" />
         <link rel="stylesheet" href="css/banding.css" />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-        />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     </head>
 
     <body>
@@ -205,7 +199,9 @@
                                 <h3>
                                     Các kênh <br />triển khai<br />chiến lược
                                 </h3>
-                                <a href="#channels-section" class="btn-detail">Chi tiết</a>
+                                <a href="#channels-section" class="btn-detail"
+                                    >Chi tiết</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -334,6 +330,13 @@
                                     </p>
                                 </div>
                             </div>
+                            <a
+                                href="#media-services"
+                                class="navigate-link arrow_consulting"
+                            >
+                                Media services
+                                <span class="arrow">➝</span>
+                            </a>
                         </div>
 
                         <div class="channel-right">
@@ -413,6 +416,66 @@
                     </div>
                 </div>
             </section>
+            <!-- Case Study  -->
+            <div class="container-fluid case-study-container">
+                <div class="row header-row">
+                    <div class="col-6">
+                        <div class="logo">
+                            <span class="dot"></span> HRVINA Solution
+                        </div>
+                    </div>
+                    <div class="col-6 text-end">
+                        <div class="service-text">Dịch vụ tư vấn truyền thông</div>
+                    </div>
+                </div>
+        
+                <div class="row content-row">
+                    <div class="col-12">
+                        <h1 class="case-study-title">Case Study 1</h1>
+                        <h2 class="industry-title">Ngành hàng: Bất động sản</h2>
+                        <p class="content-description">Nội dung: Triển khai chiến dịch truyền thông nhằm ra mắt dự án căn hộ cao cấp tại TP.HCM.</p>
+                        
+                        <div class="row mt-4 box_case_chart">
+                            <div class="col-md-5">
+                                <div class="goals-box">
+                                    <h3 class="goals-title">Mục tiêu:</h3>
+                                    <div class="row">
+                                        <div class="col-6 goal-item">
+                                            <div class="goal-icon">
+                                                <div class="progress-bar-container">
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                                <div class="goal-value">TĂNG 40%</div>
+                                            </div>
+                                            
+                                            <div class="goal-description">nhận diện thương hiệu dự án</div>
+                                        </div>
+                                        <div class="col-6 goal-item">
+                                            <div class="goal-icon">
+                                                <div class="progress-bar-container">
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                                <div class="goal-value">2000 <p>Khách hàng</p></div>
+                                            </div>
+                                            
+                                            <div class="goal-description">nhận diện thương hiệu dự án</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-7">
+                               <!-- chart  -->
+                               <div class="chart-wrapper">
+                                <canvas id="caseChart"></canvas>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
         </section>
 
         <!-- Footer -->
