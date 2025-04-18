@@ -1,7 +1,7 @@
 :root {
-  --primary-bg: #1a237e;
-  --accent-orange: #ec3f00;
-  --text-white: #ffffff;
+    --primary-bg: #1a237e;
+    --accent-orange: #ec3f00;
+    --text-white: #ffffff;
 }
 .title_about {
     font-size: 70px;
@@ -187,6 +187,7 @@
     padding: 60px 20px;
     font-family: "Inter", sans-serif;
     background-color: #fff;
+    position: relative;
 }
 
 .container-media {
@@ -353,6 +354,7 @@
     display: block;
     object-fit: cover;
 }
+
 .channel-wrapper {
     padding: 40px 0px;
     background-color: #f2f2f2; /* Box xám nằm bên trong */
@@ -364,7 +366,6 @@
 }
 
 .navigate-link.arrow_consulting {
-    position: absolute;
     bottom: 0;
     left: 0;
     font-size: 13px;
@@ -374,6 +375,10 @@
     border-bottom: 1px solid #000;
     padding-bottom: 2px;
     transition: all 0.3s ease;
+}
+
+.war_rations {
+    position: absolute;
 }
 
 .navigate-link.arrow_consulting .arrow {
@@ -424,175 +429,453 @@ canvas#caseChart {
 }
 /*  ================================================s  stesdst ================================================ */
 .case-study-container {
-  background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
-  min-height: 100vh;
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  color: white;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+    height: 600px;
+    background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .case-study-container::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background-color: rgba(255, 87, 34, 0.1);
-  z-index: 0;
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgba(255, 87, 34, 0.1);
+    z-index: 0;
 }
 
 .header-row {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
 .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent-orange);
-  border-radius: 50%;
-  margin-right: 8px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-orange);
+    border-radius: 50%;
+    margin-right: 8px;
 }
 
 .service-text {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .case-study-title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .industry-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .content-description {
-  font-size: 1.1rem;
-  max-width: 600px;
-  position: relative;
-  z-index: 1;
+    font-size: 1.1rem;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 .goals-box {
-  background-color: var(--accent-orange);
-  color: white;
-  border-radius: 15px;
-  padding: 25px;
-  height: 100%;
-  position: relative;
-  z-index: 1;
+    background-color: var(--accent-orange);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    height: 230px;
+    position: relative;
+    z-index: 1;
 }
 
 .goals-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .goal-item {
-  text-align: center;
-  padding: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 .goal-value {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 1;
-  margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 10px;
 }
 
 .goal-description {
-  font-size: 0.9rem;
-  margin-top: 5px;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .progress-bar-container {
-  width: 10px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  margin: 0 auto;
-  position: relative;
+    width: 10px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .progress-bar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40%;
-  background-color: white;
-  border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .chart-box {
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  height: 100%;
-  position: relative;
-  z-index: 1;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .chart-legend {
-  display: none; /* Will be generated by Chart.js */
+    display: none; /* Will be generated by Chart.js */
 }
 
 /* Chart colors */
-.pr-color { background-color: #1e3799; }
-.seo-color { background-color: #e84118; }
-.google-color { background-color: #0a3d62; }
-.facebook-color { background-color: #f6b93b; }
-.pr-collab-color { background-color: #38ada9; }
-.ooh-color { background-color: #4a69bd; }
+.pr-color {
+    background-color: #1e3799;
+}
+.seo-color {
+    background-color: #e84118;
+}
+.google-color {
+    background-color: #0a3d62;
+}
+.facebook-color {
+    background-color: #f6b93b;
+}
+.pr-collab-color {
+    background-color: #38ada9;
+}
+.ooh-color {
+    background-color: #4a69bd;
+}
 
 .color-box {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 3px;
-  margin-right: 5px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 5px;
 }
 .goal-icon {
-  display: flex;
+    display: flex;
 }
 
 .box_case_chart {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .goal-value p {
-  font-size: 20px;
+    font-size: 20px;
+}
+.box_study {
+    display: flex;
+    justify-content: space-between;
+}
+/* General Mobile Styles */
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+
+    /* Header styles */
+    .navbar_top_header {
+        padding: 10px 15px;
+    }
+
+    /* Brand Communication section */
+    .title_about {
+        font-size: 36px;
+        margin-left: 0;
+        line-height: 1.2;
+    }
+
+    .about_content {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .about-us-img {
+        height: auto;
+    }
+
+    /* Media Services section */
+    .service-grid {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
+        margin-bottom: 20px;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-overlay h3 {
+        font-size: 24px;
+    }
+
+    /* Branding section */
+    .branding-text p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .image_nuance img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Media Consulting section */
+    .media-content {
+        flex-direction: column;
+    }
+
+    .media-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .media-text {
+        width: 100%;
+    }
+
+    /* Channels section */
+    .channel-online {
+        margin-top: 20px;
+    }
+
+    .channel-image img {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Case Study section */
+    .case-study-container {
+        width: 100%;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .box_study {
+        flex-direction: column;
+    }
+
+    .case-study-title {
+        font-size: 28px;
+    }
+
+    .industry-title {
+        font-size: 18px;
+    }
+
+    .content-description {
+        font-size: 14px;
+    }
+
+    .box_case_chart {
+        flex-direction: column;
+    }
+
+    .goals-box {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .chart-wrapper {
+        padding: 0;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    canvas#caseChart {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Specific Mobile Menu Styles */
+@media (max-width: 767px) {
+    /* Mobile sidebar menu styling */
+    .offcanvas {
+        width: 80% !important;
+    }
+
+    /* Mobile footer */
+    .footer-links-container {
+        flex-direction: column;
+    }
+
+    .link-columns {
+        flex-direction: column;
+    }
+
+    /* Fix for the service cards to look like the image */
+    .media-services {
+        padding: 30px 0;
+    }
+
+    .service-card {
+        border-radius: 0;
+        margin-bottom: 1px; /* tiny gap between cards */
+    }
+
+    .service-overlay {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-detail {
+        width: 150px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    /* Fix for the branding design section */
+    .branding-section,
+    .media-section,
+    .channels-section {
+        padding: 30px 0;
+    }
+
+    .branding-title,
+    .media-title,
+    .channel-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    /* Fix for the channels section to match the image */
+    .channel-wrapper {
+        padding: 20px 15px;
+    }
+
+    .channel-offline h4,
+    .channel-online h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .item strong {
+        font-size: 16px;
+    }
+
+    .item p {
+        font-size: 14px;
+    }
+
+    /* Case study section specific fixes */
+    .goal-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .goal-icon {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-bar-container {
+        margin-bottom: 10px;
+    }
+
+    .goal-value {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    .goal-description {
+        text-align: center;
+    }
+}
+
+/* Special fixes for vertical layout in mobile */
+@media (max-width: 576px) {
+    .service-card {
+        height: 200px;
+    }
+
+    .content-description {
+        max-width: 100%;
+    }
+
+    .goals-box {
+        padding: 15px;
+    }
+
+    .goal-item {
+        padding: 5px;
+    }
+
+    /* Make sure the chart is visible and properly sized */
+    .chart-wrapper {
+        height: 300px;
+    }
+
+    canvas#caseChart {
+        max-height: 250px !important;
+    }
 }
 @media (max-width: 768px) {
-  .case-study-title {
-      font-size: 3rem;
-  }
-  
-  .goals-box, .chart-box {
-      margin-bottom: 20px;
-  }
+    .case-study-title {
+        font-size: 3rem;
+    }
+
+    .goals-box,
+    .chart-box {
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 992px) {
     .container-channels {
@@ -607,6 +890,21 @@ canvas#caseChart {
     .channel-image {
         transform: none;
     }
+    #branding-detail,
+    #media-consulting,
+    .channel-wrapper {
+        padding: 20px;
+    }
+    .channels-section .channel-title {
+        text-align: center;
+        font-size: 50px;
+    }
+    .channel-offline h4 {
+        font-size: 28px;
+    }
+    .channel-offline .item {
+        font-size: 16px;
+    }
 }
 /* Responsive */
 @media (max-width: 768px) {
@@ -617,7 +915,7 @@ canvas#caseChart {
 
     .branding-title {
         font-size: 36px;
-        text-align: center;
+        text-align: left;
     }
 
     .branding-text {
@@ -628,6 +926,126 @@ canvas#caseChart {
     .branding-image img {
         max-width: 100%;
     }
+}
+/* CSS cho Case Study trên mobile */
+@media (max-width: 767px) {
+  /* Container chính */
+  .case-study-container {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    overflow: hidden; /* Ngăn scroll ngang */
+  }
+  
+  /* Giữ layout box_study theo chiều ngang nhưng thu nhỏ tỷ lệ */
+  .box_study {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    transform: scale(0.85); /* Thu nhỏ toàn bộ nội dung */
+    transform-origin: top left; /* Điểm gốc khi thu nhỏ */
+  }
+  
+  /* Điều chỉnh kích thước phần nội dung */
+  .case-study-content {
+    width: 45%;
+    padding-right: 10px;
+  }
+  
+  /* Điều chỉnh kích thước phần biểu đồ */
+  .chart-container {
+    width: 55%;
+  }
+  
+  /* Điều chỉnh font size và spacing */
+  .case-study-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .industry-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .content-description {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  /* Điều chỉnh goals-box */
+  .goals-box {
+    height: auto;
+    padding: 12px;
+    margin-top: 10px;
+  }
+  
+  .goals-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .goal-item {
+    padding: 5px;
+  }
+  
+  .goal-value {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .goal-value p {
+    font-size: 14px;
+  }
+  
+  .goal-description {
+    font-size: 10px;
+  }
+  
+  .progress-bar-container {
+    height: 40px;
+  }
+  
+  /* Điều chỉnh biểu đồ */
+  .chart-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  canvas#caseChart {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin: 0 auto;
+  }
+}
+
+/* CSS cho màn hình rất nhỏ */
+@media (max-width: 375px) {
+  .box_study {
+    transform: scale(0.75); /* Thu nhỏ hơn nữa cho màn hình rất nhỏ */
+  }
+  
+  .case-study-title {
+    font-size: 20px;
+  }
+  
+  .industry-title {
+    font-size: 14px;
+  }
+  
+  .content-description {
+    font-size: 11px;
+  }
+  
+  canvas#caseChart {
+    max-width: 180px !important;
+    max-height: 180px !important;
+  }
 }
 
 /* Responsive */

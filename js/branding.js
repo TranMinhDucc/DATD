@@ -1,8 +1,15 @@
 const ctx = document.getElementById('caseChart').getContext('2d');
 
-Chart.register(ChartDataLabels);
+// Kiểm tra xem ChartDataLabels đã được đăng ký chưa
+if (typeof ChartDataLabels !== 'undefined') {
+  Chart.register(ChartDataLabels);
+}
 
-new Chart(ctx, {
+// Kiểm tra kích thước màn hình
+const isMobile = window.innerWidth < 768;
+
+// Cấu hình chart
+const chartConfig = {
   type: 'pie',
   data: {
     labels: [
@@ -14,7 +21,6 @@ new Chart(ctx, {
       'OOH (Quảng cáo ngoài trời)\n450 triệu VND'
     ],
     datasets: [{
-        
       data: [5, 15, 20, 20, 25, 15],
       backgroundColor: [
         '#44193F', // 5%
@@ -27,27 +33,54 @@ new Chart(ctx, {
     }]
   },
   options: {
-    responsive: false, // ✨ tắt responsive để không bị méo
-    maintainAspectRatio: false,
+    responsive: true, // Bật responsive
+    maintainAspectRatio: true, // Giữ tỷ lệ khung hình
     layout: {
-      padding: 100
+      padding: isMobile ? 0 : 100 // Bỏ padding trên mobile
     },
     plugins: {
-      legend: { display: false },
+      legend: { 
+        display: false // Ẩn legend để tiết kiệm không gian
+      },
       datalabels: {
+        display: isMobile ? false : true, // Ẩn datalabels trên mobile
         color: '#fff',
-        anchor: 'end',
-        align: 'end',
-        offset: 10,
-        clamp: false,
+        anchor: 'center',
+        align: 'center',
+        offset: 0,
+        clamp: true,
         font: {
           size: 9,
           weight: 'bold'
         },
-        formatter: (value, ctx) =>
-          ctx.chart.data.labels[ctx.dataIndex].replace(' - ', '\n')
+        formatter: function(value) {
+          return value + '%';
+        }
+      },
+      tooltip: {
+        enabled: true, // Luôn bật tooltip
+        callbacks: {
+          label: function(context) {
+            const label = context.label || '';
+            const value = context.formattedValue;
+            return value + '% - ' + label.split('\n')[0];
+          }
+        }
       }
     }
   }
-  
+};
+
+// Tạo biểu đồ
+const myChart = new Chart(ctx, chartConfig);
+
+// Xử lý responsive khi thay đổi kích thước màn hình
+window.addEventListener('resize', function() {
+  const newIsMobile = window.innerWidth < 768;
+  if (newIsMobile !== isMobile) {
+    // Cập nhật cấu hình biểu đồ nếu chuyển từ desktop sang mobile hoặc ngược lại
+    myChart.options.layout.padding = newIsMobile ? 0 : 100;
+    myChart.options.plugins.datalabels.display = !newIsMobile;
+    myChart.update();
+  }
 });
