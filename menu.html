@@ -1,189 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrandKols Home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background: #fff;
-      }
-      .header-bar {
-        background-color: #ffa276;
-        padding: 20px 0;
-        border-radius: 0 0 20px 20px;
-      }
-      .logo-text {
-        color: #ab6e6e;
-        font-weight: 700;
-        font-size: 24px;
-      }
-      .sidebar {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-      }
-      .sidebar .active {
-        background-color: #ffc5b0;
-        border-radius: 6px;
-      }
-      .search-bar {
-        background: #f3f3f3;
-        border-radius: 20px;
-        padding: 6px 20px;
-        display: flex;
-        align-items: center;
-      }
-      .search-bar input {
-        border: none;
-        background: transparent;
-        outline: none;
-        flex: 1;
-      }
-      .banner-img {
-        width: 100%;
-        border-radius: 10px;
-      }
-      .kol-card img {
-        width: 100%;
-        border-radius: 10px;
-      }
-      .kol-card {
-        text-align: center;
-      }
-      .kol-rating {
-        color: gold;
-        font-size: 14px;
-      }
-      .btn-booking {
-        background-color: #ffa276;
-        border-radius: 10px;
-        padding: 2px 8px;
-        font-size: 10px;
-        border: none;
-        font-weight: 600;
-      }
-      .pagination-container {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 20px;
-      }
-      .footer {
-        background-color: #3b0c06;
-        color: white;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding: 40px 0 20px;
-      }
-      .newsletter-bar {
-        background-color: #ffa276;
-        padding: 24px;
-        border-radius: 20px 20px 0 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header-bar text-center">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="logo-text">BrandKols</div>
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-dark" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#">News</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#">Dịch vụ</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container my-5">
-      <div class="row">
-        <!-- Sidebar -->
-        <div class="col-md-3 mb-4">
-          <div class="sidebar">
-            <h6 class="fw-bold">Danh mục</h6>
-            <hr />
-            <p class="text-muted">KOL theo chuyên môn</p>
-            <div class="list-group">
-              <a href="#" class="list-group-item active">Thời trang</a>
-              <a href="#" class="list-group-item">Y Dược</a>
-              <a href="#" class="list-group-item">Mỹ phẩm</a>
-              <a href="#" class="list-group-item">Điện ảnh</a>
-              <a href="#" class="list-group-item">Đồ gia dụng</a>
-              <a href="#" class="list-group-item">KOL theo nền tảng</a>
-              <a href="#" class="list-group-item">KOL theo lĩnh vực</a>
-              <a href="#" class="list-group-item">KOI theo độ tuổi</a>
-              <a href="#" class="list-group-item">Livestream</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/menu.css" />
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div
+            class="bg-white d-flex justify-content-center color_background_header"
+        >
+            <div
+                class="navbar_top_header header-wrapper d-flex justify-content-between align-items-center px-4"
+            >
+                <div class="fw-bold logo-text">BrandKols</div>
+                <ul class="nav d-none d-md-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dịch vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <button
+                    class="btn d-md-none menu-icon"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu"
+                    aria-controls="mobileMenu"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-          </div>
         </div>
 
-        <!-- Main content -->
-        <div class="col-md-9">
-          <div class="mb-4">
-            <div class="search-bar">
-              <input type="text" placeholder="hạ thị nhung" />
-              <i class="fas fa-search"></i>
+        <!-- OFFCANVAS MENU -->
+        <div
+            class="offcanvas offcanvas-end text-bg-white"
+            tabindex="-1"
+            id="mobileMenu"
+            aria-labelledby="mobileMenuLabel"
+        >
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold" id="mobileMenuLabel">
+                    Menu
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
             </div>
-          </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold" href="#"
+                            >About Us</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold" href="#"
+                            >Our Team</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold" href="#"
+                            >Services</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold" href="#"
+                            >News</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold" href="#"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-          <img src="images/banner.jpg" alt="Banner" class="banner-img mb-4" />
+        <!-- MAIN CONTENT -->
+        <div class="container py-5">
+            <div class="row">
+                <!-- SIDEBAR FILTER -->
+                <div class="col-md-3 mb-4">
+                    <div class="filter-box">
+                        <div class="filter-title">Danh mục</div>
+                        <div class="accordion" id="accordionFilter">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                    >
+                                        KOL theo chuyên môn
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse"
+                                >
+                                    <div class="accordion-body ps-0 pt-2">
+                                        <a href="#" class="btn-category"
+                                            >Thời trang</a
+                                        >
+                                        <a href="#" class="filter-link"
+                                            >Y Dược</a
+                                        >
+                                        <a href="#" class="filter-link"
+                                            >Mỹ phẩm</a
+                                        >
+                                        <a href="#" class="filter-link"
+                                            >Điện ảnh</a
+                                        >
+                                        <a href="#" class="filter-link"
+                                            >Đồ gia dụng</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#" class="filter-link"
+                                >KOL theo nền tảng</a
+                            >
+                            <a href="#" class="filter-link"
+                                >KOL theo lĩnh vực</a
+                            >
+                            <a href="#" class="filter-link">KOL theo độ tuổi</a>
+                            <a href="#" class="filter-link">Livestream</a>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="row g-4">
-            <!-- KOL Item -->
-            <div class="col-6 col-md-4 kol-card">
-              <img src="images/kol1.jpg" alt="" />
-              <h6 class="mt-2 mb-0">HẠ THỊ NHUNG</h6>
-              <div class="kol-rating">★★★★★</div>
-              <button class="btn-booking">>> booking</button>
+                <!-- MAIN COLUMN: BANNER + USER LIST -->
+                <div class="col-md-9">
+                    <!-- BANNER -->
+                    <section class="banner-section mb-4">
+                        <div class="banner-wrapper rounded overflow-hidden">
+                            <img
+                                src="./images/client/menu/banner.jpeg"
+                                alt="Banner KOL"
+                                class="img-fluid w-100"
+                                style="border-radius: 12px"
+                            />
+                        </div>
+                    </section>
+
+                    <!-- USER LIST -->
+                    <section class="kol-list-section">
+                        <div class="row g-4">
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div
+                                        class="p-3 justify-content-between align-items-center"
+                                    >
+                                        <div
+                                            class="justify-content-between align-items-center"
+                                        >
+                                            <h6
+                                                class="font-mobi-menu mb-2 text-uppercase fw-semibold m-0"
+                                            >
+                                                HẠ THỊ NHUNG
+                                            </h6>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div
+                                        class="p-3 justify-content-between align-items-center"
+                                    >
+                                        <div
+                                            class="justify-content-between align-items-center"
+                                        >
+                                            <h6
+                                                class="font-mobi-menu mb-2 text-uppercase fw-semibold m-0"
+                                            >
+                                                HẠ THỊ NHUNG
+                                            </h6>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KOL Card -->
+                            <div class="col-6 col-sm-6 col-lg-4">
+                                <div class="kol-card border">
+                                    <!-- Splide Slider -->
+                                    <div
+                                        class="splide avatar-slider"
+                                        aria-label="User Images"
+                                    >
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt1.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt12.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img
+                                                        src="./images/client/menu/avt13.jpg"
+                                                        alt=""
+                                                    />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div class="p-3">
+                                        <h6
+                                            class="user-name text-uppercase fw-semibold mb-2"
+                                        >
+                                            CHƯƠNG NHƯỢC NAM
+                                        </h6>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
+                                        >
+                                            <div
+                                                class="d-flex stars text-warning mb-0"
+                                            >
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="booking-label">
+                                                » booking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more KOL Cards here -->
+                        </div>
+
+                        <!-- PAGINATION -->
+                        <nav class="mt-4 d-flex justify-content-end justify-content-center-sm">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">«</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">»</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="newsletter-bar">
+                <div class="newsletter-content container">
+                    <h4>BandKols</h4>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Address" />
+                        <button class="btn-newsletter">Get Newsletter</button>
+                    </div>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main container">
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> contact.me@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 01234 567 890</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Cecilia Chapman
+                        711-2880 Nulla St. Mankato Mississippi 96522
+                    </p>
+                </div>
+                <div class="footer-links-container">
+                    <div class="footer-links">
+                        <h5>KOLS</h5>
+                        <div class="link-columns">
+                            <ul>
+                                <li>Music</li>
+                                <li>Gameing</li>
+                                <li>Model</li>
+                                <li>Art</li>
+                            </ul>
+                            <ul>
+                                <li>Sports</li>
+                                <li>Fashion</li>
+                                <li>Photography</li>
+                            </ul>
+                            <ul>
+                                <li>Sports</li>
+                                <li>Fashion</li>
+                                <li>Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-app">
+                        <h5>Dowload App</h5>
+                        <img
+                            src="images/client/footers/appstore.png"
+                            alt="App Store"
+                            class="store-btn"
+                        />
+                        <img
+                            src="images/client/footers/google_play.png"
+                            alt="Google Play"
+                            class="store-btn"
+                        />
+                    </div>
+                </div>
             </div>
 
-            <!-- Repeat for each KOL... -->
-          </div>
-
-          <!-- Pagination -->
-          <div class="pagination-container">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>Next</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <div class="newsletter-bar container d-flex flex-wrap align-items-center justify-content-between">
-        <h4 class="mb-0">BandKols</h4>
-        <div class="d-flex flex-wrap align-items-center gap-2">
-          <input type="email" placeholder="Email Address" class="form-control" style="border-radius: 20px" />
-          <button class="btn btn-dark">Get Newsletter</button>
-        </div>
-        <div class="social-icons d-flex gap-2">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-instagram"></i>
-        </div>
-      </div>
-      <div class="container mt-4 text-center">
-        <p>© 2025 BOOKINGBRAND.COM.,LTD</p>
-      </div>
-    </div>
-  </body>
+            <div class="footer-bottom">
+                <p>© 2025 BOOKINGBRAND.COM.,LTD</p>
+            </div>
+        </footer>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                document
+                    .querySelectorAll(".avatar-slider")
+                    .forEach((slider) => {
+                        new Splide(slider, {
+                            type: "loop",
+                            perPage: 1,
+                            arrows: true,
+                            pagination: false,
+                        }).mount();
+                    });
+            });
+        </script>
+    </body>
 </html>

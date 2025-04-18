@@ -1,110 +1,97 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  /* ====== HEADER ====== */
-  .navbar_top_header {
+}
+
+/* ====== HEADER ====== */
+.navbar_top_header {
     background-color: #ffa276 !important;
-  }
-  
-  .title_about {
+}
+
+.title_about {
     margin-left: 320px;
     font-size: 90px;
     padding: 30px 0;
-  }
-  
-  /* ====== ABOUT ====== */
-  .about-us-img {
+}
+
+.about_content {
+    font-size: 16px;
+}
+
+/* ====== ABOUT ====== */
+.about-us-img {
     display: block;
-    margin-top: 40px;
+    margin-top: 50px;
     height: 386px;
     object-fit: cover;
-  }
-  
-  .content_button_about {
+}
+
+.content_button_about {
     font-size: 16px;
     color: #000;
-  }
-  
-  /* ====== SLOGAN ====== */
-  .slogan-section {
+}
+
+/* ====== SLOGAN ====== */
+.slogan-section {
     padding: 60px 20px;
-  }
-  
-  .container {
-    max-width: 1320px;
+}
+
+.container {
+    max-width: 1200px;
     margin: auto;
-  }
-  
-  .slogan-content {
+}
+
+.slogan-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .slogan-text {
+}
+
+.slogan-text {
+    font-family: "Iowan Old Style", Georgia, serif;
     flex: 1;
-    min-width: 320px;
     max-width: 500px;
   }
-  
-  .slogan-title {
+
+.slogan-desc {
     font-size: 36px;
     font-weight: 400;
     font-family: "Iowan Old Style", serif;
-    margin-bottom: 10px;
-  }
-  
-  .slogan-desc {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.5;
-    font-family: "Iowan Old Style", serif;
     margin-bottom: 12px;
-  }
-  
-  .slogan-subtext {
+}
+
+.slogan-subtext {
     font-size: 15px;
     color: #c5a2a2;
-  }
-  
-  .slogan-image img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  /* ====== TEAM SECTION (Splide) ====== */
-  .team-section {
+}
+
+/* ====== TEAM SECTION (Splide) ====== */
+.team-section {
     padding: 60px 20px;
     background-color: #fff;
     text-align: center;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 40px;
     color: #222;
-  }
-  
-  /* Splide slide item */
-  .splide__slide {
+}
+
+/* Splide slide item */
+.splide__slide {
     display: flex;
     justify-content: center;
-  }
-  
-  /* Card thành viên */
-  .team-member {
+}
+
+/* Card thành viên */
+.team-member {
     background: #fafafa;
     border-radius: 16px;
     padding: 24px 16px;
@@ -112,47 +99,47 @@
     width: 100%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .team-member:hover {
+}
+
+.team-member:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  }
-  
-  .team-member img {
+}
+
+.team-member img {
     width: 100%;
     height: 320px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 16px;
-  }
-  
-  .team-member h4 {
+}
+
+.team-member h4 {
     font-size: 20px;
     font-weight: 600;
     color: #333;
     margin-bottom: 4px;
-  }
-  
-  .team-member .position {
+}
+
+.team-member .position {
     font-size: 14px;
     font-weight: 500;
     color: #888;
     margin-bottom: 12px;
-  }
-  
-  .team-member .education,
-  .team-member .experience {
+}
+
+.team-member .education,
+.team-member .experience {
     font-size: 13px;
     color: #444;
     text-align: left;
     margin-bottom: 6px;
     line-height: 1.5;
     padding: 0 10px;
-  }
-  
-  /* Splide navigation buttons */
-  .splide__arrow {
+}
+
+/* Splide navigation buttons */
+.splide__arrow {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 50%;
@@ -163,92 +150,114 @@
     transform: translateY(-50%);
     transition: 0.3s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .splide__arrow:hover {
+}
+
+.splide__arrow:hover {
     background-color: #333;
     color: white;
     border-color: #333;
-  }
-  .offcanvas-title {
+}
+.offcanvas-title {
     font-weight: 600;
-  }
-  
-  .offcanvas-body .nav-link {
+}
+
+.offcanvas-body .nav-link {
     font-size: 16px;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
-  }
-  
-  
-  /* ====== RESPONSIVE ====== */
-  @media (min-width: 768px) {
+}
+
+.slogan-image img {
+    width: 606px;
+    height: 258px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .slogan-image img,.about-us-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        min-width: unset !important;
+        max-width: 100% !important;
+    }
+}
+/* ====== RESPONSIVE ====== */
+@media (min-width: 768px) {
     /* Splide slide spacing */
     .splide__slide {
-      padding: 0 5px; /* giảm padding slide để gần nhau hơn */
+        padding: 0 5px; /* giảm padding slide để gần nhau hơn */
     }
-  
+
     /* Member rộng hơn (chiếm gần nửa màn hình) */
     .team-member {
-      max-width: 70%;
-      width: 100%;
+        max-width: 70%;
+        width: 100%;
     }
-  
+
     /* Đảm bảo team section không bị quá hẹp */
     .team-section .splide__track {
         padding-left: 0;
         padding-right: 0;
         margin-left: -5px;
         margin-right: -5px;
-      }
-  }
-  
-  
-  @media (max-width: 768px) {
+    }
+}
+
+@media (max-width: 768px) {
     .title_about {
-      margin-left: 0;
-      font-size: 48px;
+        margin-left: 0;
+        font-size: 48px;
     }
-  
+
     .section-title {
-      font-size: 36px;
+        font-size: 36px;
     }
-  
+
     .team-member {
-      max-width: 90%;
+        max-width: 90%;
     }
-  
+
     .team-member img {
-      height: 280px;
+        height: 280px;
     }
-  
+
     .carousel-btn {
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
     }
-  
+
     .slogan-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
     }
-  
     .slogan-text,
-    .slogan-image {
-      max-width: 100%;
+    .slogan-image img {
+        max-width: 100%;
     }
-  
+    .slogan-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* không cắt ảnh */
+    }
+
     .team-section {
-      padding: 40px 20px;
+        padding: 40px 20px;
     }
-  
+
     /* 👇 Đẩy nút Splide ra khỏi card member trên mobile */
     .splide__arrow--prev {
-      left: -12px !important;
+        left: -12px !important;
     }
-  
+
     .splide__arrow--next {
-      right: -12px !important;
+        right: -12px !important;
     }
-  }
-  
+    .slogan-text {
+        min-width: unset !important;
+        max-width: 100%;
+        text-align: left;
+      }
+}

@@ -16,6 +16,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/home.css" />
         <link
@@ -27,42 +28,82 @@
             href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
         />
     </head>
-
+    <!-- Menu  -->
     <nav class="bg-white d-flex justify-content-center color_background_header">
-        <div class="navbar_top_header header-wrapper d-flex justify-content-between align-items-center px-4 w-100">
-          <!-- Logo -->
-          <div class="fw-bold logo-text">BrandKols</div>
-    
-          <!-- Navigation (Desktop) -->
-          <ul class="nav d-none d-md-flex">
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          </ul>
-    
-          <!-- Hamburger (Mobile) -->
-          <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-            <i class="fas fa-bars fa-lg"></i>
-          </button>
+        <div
+            class="navbar_top_header header-wrapper d-flex justify-content-between align-items-center px-4 w-100"
+        >
+            <!-- Logo -->
+            <div class="fw-bold logo-text">
+                BrandKols
+            </div>
+
+            <!-- Navigation (Desktop) -->
+            <ul class="nav d-none d-md-flex">
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About Us</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Hamburger (Mobile) -->
+            <button
+                class="btn d-md-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu"
+            >
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
         </div>
-      </nav>
-    
-      <!-- Offcanvas menu (Mobile) -->
-      <div class="offcanvas offcanvas-end text-bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    </nav>
+
+    <!-- Offcanvas menu (Mobile) -->
+    <div
+        class="offcanvas offcanvas-end text-bg-white"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+    >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title fw-bold" id="mobileMenuLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title fw-bold" id="mobileMenuLabel">Menu</h5>
+            <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+            ></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">About Us</a></li>
-            <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">News</a></li>
-            <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Dịch vụ</a></li>
-            <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Contact</a></li>
-          </ul>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#"
+                        >About Us</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#"
+                        >Dịch vụ</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#"
+                        >Contact</a
+                    >
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
     <!-- Banner Section -->
     <section class="banner">
@@ -204,7 +245,7 @@
 
     <!-- About Section -->
     <section class="py-5 bg-white">
-        <div class="container">
+        <div class="container container_home">
             <!-- Title lên trên toàn bộ -->
             <div class="row">
                 <div class="col-12">
@@ -245,7 +286,7 @@
                     </p>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12 ">
                     <img
                         src="https://s3-alpha-sig.figma.com/img/ba74/3aff/f678697fcba863fe4411a57c6e38a514?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Lo4QuohVaTyLdgjmE0UCAvsuoHHWmlbDdpWrbuQy6jIqQPmi07xOGeUFjFyzWnutqctYWrr8S89gPOhdlwSMHkicNh2QRIj278FguVv9rBLq82-7EhKbW~nOjTUVV0WBbpgcPv1z~MxNYxzR80t4FkhV1ygUFrcJmR5FUEYFIZOOSTA1ER5M6i2lqwNRwoeUxbWs2n7FhPEJ31frbRzGbfDZBT8sqyAgIfTjO4I4T0qHNxQF9BOghZ8Nb7-O4ZYwvkHH4tHYrCsL22Hhfsydl6vBlHK2u121Hu4R16TahSAekuaSJpZf6ejqvBjGPr7VcTsWHheETjA-coqGBPYuPg__"
                         alt="About Us Image"
@@ -258,7 +299,7 @@
 
     <!-- Our Services   -->
     <section class="py-5 bg-white">
-        <div class="container">
+        <div class="container container_home">
             <h2 class="fw-bold mb-5" style="font-size: 50px">Our Services</h2>
             <div class="row g-4">
                 <!-- Card 1 -->
@@ -346,19 +387,19 @@
         <div class="container">
             <div class="row text-center text-white">
                 <div class="col-md-3">
-                    <h2 class="stat-number">80000 +</h2>
+                    <h2 class="stat-number font_rajdhani">80000 +</h2>
                     <p class="stat-label">KOLS</p>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="stat-number">195000+</h2>
+                    <h2 class="stat-number font_rajdhani">195000+</h2>
                     <p class="stat-label">MEMBERSHIP</p>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="stat-number">1500</h2>
+                    <h2 class="stat-number font_rajdhani">1500</h2>
                     <p class="stat-label">PROJECT</p>
                 </div>
                 <div class="col-md-3">
-                    <h2 class="stat-number">1330</h2>
+                    <h2 class="stat-number font_rajdhani">1330</h2>
                     <p class="stat-label">HAPPY CLIENTS</p>
                 </div>
             </div>
@@ -373,43 +414,92 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <div class="testimonial-card p-4 text-center">
-                                <img src="./images/client/home/testimonial/user1.jpeg" alt="avatar" class="testimonial-avatar mb-3" />
-                                <p class="testimonial-content">KOL xin vãi....chúng tôi cảm thấy rất hài lòng. Một viên kẹo bằng 1 đĩa rau luộc.</p>
+                                <img
+                                    src="./images/client/home/testimonial/user1.jpeg"
+                                    alt="avatar"
+                                    class="testimonial-avatar mb-3"
+                                />
+                                <p class="testimonial-content">
+                                    KOL xin vãi....chúng tôi cảm thấy rất hài
+                                    lòng. Một viên kẹo bằng 1 đĩa rau luộc.
+                                </p>
                                 <div class="testimonial-stars mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i>
                                 </div>
                                 <h5 class="testimonial-name">Hằng Du Mục</h5>
-                                <p class="testimonial-role">CEO - Chị Em Rợt Group</p>
+                                <p class="testimonial-role">
+                                    CEO - Chị Em Rợt Group
+                                </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="testimonial-card p-4 text-center">
-                                <img src="./images/client/home/testimonial/user2.png" alt="avatar" class="testimonial-avatar mb-3" />
-                                <p class="testimonial-content">"Một viên kẹo bằng một đĩa rau"</p>
+                                <img
+                                    src="./images/client/home/testimonial/user2.png"
+                                    alt="avatar"
+                                    class="testimonial-avatar mb-3"
+                                />
+                                <p class="testimonial-content">
+                                    "Một viên kẹo bằng một đĩa rau"
+                                </p>
                                 <div class="testimonial-stars mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i>
                                 </div>
                                 <h5 class="testimonial-name">Quang Linh</h5>
-                                <p class="testimonial-role">CEO - Chị Em Rợt Group</p>
+                                <p class="testimonial-role">
+                                    CEO - Chị Em Rợt Group
+                                </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="testimonial-card p-4 text-center">
-                                <img src="./images/client/home/testimonial/user3.jpeg" alt="avatar" class="testimonial-avatar mb-3" />
-                                <p class="testimonial-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <img
+                                    src="./images/client/home/testimonial/user3.jpeg"
+                                    alt="avatar"
+                                    class="testimonial-avatar mb-3"
+                                />
+                                <p class="testimonial-content">
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry.
+                                </p>
                                 <div class="testimonial-stars mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i>
                                 </div>
                                 <h5 class="testimonial-name">Thuỷ Tiên</h5>
-                                <p class="testimonial-role">Đại sứ thương hiệu Kera</p>
+                                <p class="testimonial-role">
+                                    Đại sứ thương hiệu Kera
+                                </p>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <div class="testimonial-card p-4 text-center">
-                                <img src="./images/client/home/testimonial/odp.jpeg" alt="avatar" class="testimonial-avatar mb-3" />
-                                <p class="testimonial-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <img
+                                    src="./images/client/home/testimonial/odp.jpeg"
+                                    alt="avatar"
+                                    class="testimonial-avatar mb-3"
+                                />
+                                <p class="testimonial-content">
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry.
+                                </p>
                                 <div class="testimonial-stars mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i
+                                    ><i class="fas fa-star"></i>
                                 </div>
                                 <h5 class="testimonial-name">Ôn Dĩ Phàm</h5>
                                 <p class="testimonial-role">OP</p>
@@ -420,72 +510,78 @@
             </div>
         </div>
     </section>
-    <!-- Footer  -->
-    <footer class="footer">
-        <div class="newsletter-bar">
-            <div class="newsletter-content container">
-                <h4>BandKols</h4>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="Email Address" />
-                    <button class="btn-newsletter">Get Newsletter</button>
-                </div>
-                <div class="social-icons">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-main container">
-            <div class="footer-contact">
-                <p><i class="fas fa-envelope"></i> contact.me@gmail.com</p>
-                <p><i class="fas fa-phone"></i> 01234 567 890</p>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i> Cecilia Chapman
-                    711-2880 Nulla St. Mankato Mississippi 96522
-                </p>
-            </div>
-            <div class="footer-links-container">
-                <div class="footer-links">
-                    <h5>KOLS</h5>
-                    <div class="link-columns">
-                        <ul>
-                            <li>Music</li>
-                            <li>Gameing</li>
-                            <li>Model</li>
-                            <li>Art</li>
-                        </ul>
-                        <ul>
-                            <li>Sports</li>
-                            <li>Fashion</li>
-                            <li>Photography</li>
-                        </ul>
-                        <ul>
-                            <li>Sports</li>
-                            <li>Fashion</li>
-                            <li>Photography</li>
-                        </ul>
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="border_footer">
+            <div class="newsletter-bar">
+                <div class="newsletter-content container">
+                    <h4>BandKols</h4>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Address" />
+                        <button class="btn-newsletter">
+                            Get Newsletter
+                        </button>
+                    </div>
+                    <div class="social-icons">
+                        <img src="images/client/footers/fb.png" alt="" />
+                        <img src="images/client/footers/ig.png" alt="" />
+                        <img src="images/client/footers/yt.png" alt="" />
                     </div>
                 </div>
-                <div class="footer-app">
-                    <h5>Dowload App</h5>
-                    <img
-                        src="images/client/footers/appstore.png"
-                        alt="App Store"
-                        class="store-btn"
-                    />
-                    <img
-                        src="images/client/footers/google_play.png"
-                        alt="Google Play"
-                        class="store-btn"
-                    />
+            </div>
+
+            <div class="footer-main container">
+                <div class="footer-contact">
+                    <p>
+                        <i class="fas fa-envelope"></i> contact.me@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone"></i> 01234 567 890</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Cecilia
+                        Chapman, Mankato, Mississippi
+                    </p>
+                </div>
+                <div class="footer-links-container">
+                    <div class="footer-links">
+                        <h5>KOLS</h5>
+                        <div class="link-columns">
+                            <ul>
+                                <li>Music</li>
+                                <li>Gameing</li>
+                                <li>Model</li>
+                                <li>Art</li>
+                            </ul>
+                            <ul>
+                                <li>Sports</li>
+                                <li>Fashion</li>
+                                <li>Photography</li>
+                            </ul>
+                            <ul>
+                                <li>Sports</li>
+                                <li>Fashion</li>
+                                <li>Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-app">
+                        <h5>Download App</h5>
+                        <img
+                            src="images/client/footers/appstore.png"
+                            alt="App Store"
+                            class="store-btn"
+                        />
+                        <img
+                            src="images/client/footers/google_play.png"
+                            alt="Google Play"
+                            class="store-btn"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>© 2025 BOOKINGBRAND.COM.,LTD</p>
+            <div class="footer-bottom">
+                <p>© 2025 BOOKINGBRAND.COM.,LTD</p>
+            </div>
         </div>
     </footer>
     <!-- Scripts -->

@@ -2,9 +2,14 @@
     background: linear-gradient(90deg, #fb99e7, #fc8782, #fcd797, #eb92a7);
 }
 
+.font_rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
 .header-wrapper {
     opacity: 0.6;
-    width: 1320px !important;
+    width: 1200px !important;
     max-width: 100%;
 }
 
@@ -57,8 +62,23 @@
     right: -80px !important;
 }
 
+.container_home, .sub_banner_home{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-us-img {
+    margin-top: 40px;
+    width: 100%;
+    display: block;
+    height: 386px;
+    object-fit: cover;
+}
+
+
 .sub_banner_home{
     position: relative;
+  
 }
 
 @media (max-width: 768px) {
@@ -68,5 +88,10 @@
 
     .splide__arrow--next {
         right: -5px !important;
+    }
+    .about-us-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Đảm bảo ảnh không bị crop */
     }
 }
