@@ -80,6 +80,18 @@
     position: relative;
   
 }
+.title_about {
+    margin-left: 300px;
+    font-size: 90px;
+    padding: 30px 0;
+}
+.service-card {
+    height: 299px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa nội dung theo chiều dọc */
+    border: 1px solid #dee2e6; /* optional: nếu bạn muốn có viền */
+}
 
 @media (max-width: 768px) {
     .splide__arrow--prev {
@@ -93,5 +105,8 @@
         width: 100%;
         height: auto;
         object-fit: contain; /* Đảm bảo ảnh không bị crop */
+    }
+    .title_about{
+        margin-left: 0;
     }
 }

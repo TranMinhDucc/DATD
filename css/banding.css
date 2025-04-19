@@ -3,13 +3,16 @@
     --accent-orange: #ec3f00;
     --text-white: #ffffff;
 }
+
 .title_about {
     font-size: 70px;
 }
+
 .about_content {
     font-size: 30px;
     text-align: center;
 }
+
 .media-services {
     padding: 60px 20px;
     background-color: #fff;
@@ -46,7 +49,6 @@
 .service-overlay {
     position: absolute;
     inset: 0;
-    /* background: rgba(0, 0, 0, 0.4); */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -60,11 +62,12 @@
     font-weight: 700;
     margin-bottom: 15px;
 }
+
 .btn-detail {
-    display: block; /* giúp margin auto hoạt động đúng */
-    width: 183px; /* đúng như thiết kế */
+    display: block;
+    width: 183px;
     height: 38px;
-    line-height: 38px; /* căn giữa chữ theo chiều dọc */
+    line-height: 38px;
     background-color: #ffa07a;
     color: white;
     border-radius: 6px;
@@ -72,17 +75,12 @@
     font-weight: 600;
     font-size: 14px;
     text-align: center;
-    margin: 0 auto; /* căn giữa theo chiều ngang */
+    margin: 0 auto;
     transition: background 0.3s ease;
 }
 
 .btn-detail:hover {
     background-color: #ff8855;
-}
-
-.service-card:hover img {
-    opacity: 1;
-    filter: brightness(110%);
 }
 
 /* Hover Effect */
@@ -93,6 +91,7 @@
 .service-card:hover img {
     filter: brightness(110%);
 }
+
 .branding-section {
     padding: 60px 20px;
     background-color: #fff;
@@ -152,6 +151,7 @@
     height: 495px;
     object-fit: cover;
 }
+
 .navigate-link {
     display: inline-block;
     font-size: 13px;
@@ -181,8 +181,9 @@
 }
 
 .navigate-link:hover .arrow {
-    transform: translateX(4px); /* hiệu ứng mũi tên chạy sang phải */
+    transform: translateX(4px);
 }
+
 .media-section {
     padding: 60px 20px;
     font-family: "Inter", sans-serif;
@@ -196,7 +197,6 @@
 }
 
 .media-title {
-    font-size: 48px;
     font-size: 50px;
     font-weight: 700;
     color: #000;
@@ -208,7 +208,6 @@
     gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
 }
 
 .media-image img {
@@ -219,7 +218,6 @@
 }
 
 .media-text {
-    /* flex: 1; */
     width: 617px;
     font-size: 16px;
     color: #000;
@@ -246,7 +244,7 @@
 
 .container-channels {
     display: flex;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 40px;
@@ -299,53 +297,6 @@
     position: relative;
 }
 
-.container-channels {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.channel-left {
-    width: 50%;
-}
-
-.channel-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.channel-left .item,
-.channel-right .item {
-    margin-bottom: 20px;
-}
-
-.channel-left h4,
-.channel-right h4 {
-    font-size: 20px;
-    margin: 20px 0 10px;
-}
-
-.channel-left p,
-.channel-right p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.channel-right {
-    width: 50%;
-}
-
-.about-us-img {
-    margin-top: 40px;
-    width: 100%;
-    display: block;
-    height: 386px;
-    object-fit: cover;
-}
-
 .channel-image img {
     position: absolute;
     top: 0;
@@ -357,12 +308,13 @@
 
 .channel-wrapper {
     padding: 40px 0px;
-    background-color: #f2f2f2; /* Box xám nằm bên trong */
+    background-color: #f2f2f2;
     margin: 0 auto;
 }
+
 .channel-left {
-    position: relative; /* làm cha chứa */
-    padding-bottom: 60px; /* chừa chỗ cho link nếu cần */
+    position: relative;
+    padding-bottom: 60px;
 }
 
 .navigate-link.arrow_consulting {
@@ -393,28 +345,21 @@
 }
 
 .navigate-link.arrow_consulting:hover .arrow {
-    transform: translateX(4px); /* hiệu ứng mũi tên chạy sang phải */
+    transform: translateX(4px);
 }
+
 .chart-wrapper {
     width: 100%;
-    max-width: 420px;
+    max-width: 700px;
+    padding: 30px;
+    box-sizing: border-box;
     margin: auto;
-
-    aspect-ratio: 1 / 1; /* ✨ Thêm dòng này để giữ hình vuông */
     position: relative;
 }
 
 canvas {
     width: 100% !important;
     height: 100% !important;
-}
-.chart-wrapper {
-    width: 100%;
-    max-width: 700px; /* Giúp có nhiều không gian để label */
-    padding: 30px;
-    box-sizing: border-box;
-    margin: auto;
-    position: relative;
 }
 
 canvas#caseChart {
@@ -427,7 +372,7 @@ canvas#caseChart {
 .box_case_study {
     background: #21285b;
 }
-/*  ================================================s  stesdst ================================================ */
+
 .case-study-container {
     height: 600px;
     background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
@@ -438,18 +383,6 @@ canvas#caseChart {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.case-study-container::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-color: rgba(255, 87, 34, 0.1);
-    z-index: 0;
 }
 
 .header-row {
@@ -560,7 +493,7 @@ canvas#caseChart {
 }
 
 .chart-legend {
-    display: none; /* Will be generated by Chart.js */
+    display: none;
 }
 
 /* Chart colors */
@@ -590,6 +523,7 @@ canvas#caseChart {
     border-radius: 3px;
     margin-right: 5px;
 }
+
 .goal-icon {
     display: flex;
 }
@@ -602,11 +536,80 @@ canvas#caseChart {
 .goal-value p {
     font-size: 20px;
 }
+
 .box_study {
     display: flex;
     justify-content: space-between;
 }
-/* General Mobile Styles */
+
+.about-us-img {
+    margin-top: 40px;
+    width: 100%;
+    display: block;
+    height: 386px;
+    object-fit: cover;
+}
+
+/* Media Queries - Consolidated and prioritized from bottom to top */
+
+/* CSS for very small screens */
+@media (max-width: 375px) {
+    .case-study-container {
+        min-height: 750px;
+    }
+    
+    .case-study-title {
+        font-size: 24px;
+    }
+    
+    .industry-title {
+        font-size: 16px;
+    }
+    
+    .content-description {
+        font-size: 12px;
+    }
+    
+    .goals-box {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .chart-wrapper {
+        max-width: 280px;
+    }
+    
+    canvas#caseChart {
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+
+    .service-card {
+        height: 200px;
+    }
+
+    .content-description {
+        max-width: 100%;
+    }
+
+    .goals-box {
+        padding: 15px;
+    }
+
+    .goal-item {
+        padding: 5px;
+    }
+
+    .chart-wrapper {
+        height: 300px;
+    }
+
+    canvas#caseChart {
+        max-height: 250px !important;
+    }
+}
+
+/* CSS for mobile case study */
 @media (max-width: 767px) {
     body {
         overflow-x: hidden;
@@ -617,6 +620,102 @@ canvas#caseChart {
         padding-left: 15px;
         padding-right: 15px;
         width: 100%;
+    }
+
+    /* Case study container */
+    .case-study-container {
+        width: 100%;
+        height: auto;
+        min-height: 800px;
+        padding: 20px 15px;
+        overflow: hidden;
+    }
+    
+    .box_study {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: none;
+        margin: 0 auto;
+    }
+    
+    .case-study-content {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .chart-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .case-study-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .industry-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .content-description {
+        font-size: 14px;
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .goals-box {
+        height: auto;
+        padding: 20px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .goals-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .goal-item {
+        padding: 5px;
+    }
+    
+    .goal-value {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+    
+    .goal-value p {
+        font-size: 16px;
+    }
+    
+    .goal-description {
+        font-size: 12px;
+    }
+    
+    .chart-wrapper {
+        padding: 0;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    canvas#caseChart {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 300px !important; 
+        max-height: 300px !important;
+        margin: 0 auto;
     }
 
     /* Header styles */
@@ -699,74 +798,23 @@ canvas#caseChart {
         height: auto;
     }
 
-    /* Case Study section */
-    .case-study-container {
-        width: 100%;
-        height: auto;
-        padding: 20px 15px;
-    }
-
-    .box_study {
-        flex-direction: column;
-    }
-
-    .case-study-title {
-        font-size: 28px;
-    }
-
-    .industry-title {
-        font-size: 18px;
-    }
-
-    .content-description {
-        font-size: 14px;
-    }
-
-    .box_case_chart {
-        flex-direction: column;
-    }
-
-    .goals-box {
-        margin-bottom: 30px;
-        width: 100%;
-    }
-
-    .chart-wrapper {
-        padding: 0;
-        margin-top: 30px;
-        max-width: 100%;
-    }
-
-    canvas#caseChart {
-        width: 100% !important;
-        height: auto !important;
-    }
-}
-
-/* Specific Mobile Menu Styles */
-@media (max-width: 767px) {
     /* Mobile sidebar menu styling */
     .offcanvas {
         width: 80% !important;
-    }
-
-    /* Mobile footer */
-    .footer-links-container {
-        flex-direction: column;
     }
 
     .link-columns {
         flex-direction: column;
     }
 
-    /* Fix for the service cards to look like the image */
+    /* Fix for the service cards */
     .media-services {
         padding: 30px 0;
     }
 
     .service-card {
         border-radius: 0;
-        margin-bottom: 1px; /* tiny gap between cards */
+        margin-bottom: 1px;
     }
 
     .service-overlay {
@@ -781,7 +829,7 @@ canvas#caseChart {
         line-height: 35px;
     }
 
-    /* Fix for the branding design section */
+    /* Fix for design sections */
     .branding-section,
     .media-section,
     .channels-section {
@@ -795,7 +843,7 @@ canvas#caseChart {
         margin-bottom: 15px;
     }
 
-    /* Fix for the channels section to match the image */
+    /* Fix for channels section */
     .channel-wrapper {
         padding: 20px 15px;
     }
@@ -814,7 +862,7 @@ canvas#caseChart {
         font-size: 14px;
     }
 
-    /* Case study section specific fixes */
+    /* Case study specific */
     .goal-item {
         display: flex;
         flex-direction: column;
@@ -840,33 +888,6 @@ canvas#caseChart {
     }
 }
 
-/* Special fixes for vertical layout in mobile */
-@media (max-width: 576px) {
-    .service-card {
-        height: 200px;
-    }
-
-    .content-description {
-        max-width: 100%;
-    }
-
-    .goals-box {
-        padding: 15px;
-    }
-
-    .goal-item {
-        padding: 5px;
-    }
-
-    /* Make sure the chart is visible and properly sized */
-    .chart-wrapper {
-        height: 300px;
-    }
-
-    canvas#caseChart {
-        max-height: 250px !important;
-    }
-}
 @media (max-width: 768px) {
     .case-study-title {
         font-size: 3rem;
@@ -876,38 +897,7 @@ canvas#caseChart {
     .chart-box {
         margin-bottom: 20px;
     }
-}
-@media (max-width: 992px) {
-    .container-channels {
-        flex-direction: column;
-    }
 
-    .channel-left,
-    .channel-right {
-        width: 100%;
-    }
-
-    .channel-image {
-        transform: none;
-    }
-    #branding-detail,
-    #media-consulting,
-    .channel-wrapper {
-        padding: 20px;
-    }
-    .channels-section .channel-title {
-        text-align: center;
-        font-size: 50px;
-    }
-    .channel-offline h4 {
-        font-size: 28px;
-    }
-    .channel-offline .item {
-        font-size: 16px;
-    }
-}
-/* Responsive */
-@media (max-width: 768px) {
     .container-branding {
         flex-direction: column;
         align-items: center;
@@ -927,125 +917,37 @@ canvas#caseChart {
         max-width: 100%;
     }
 }
-/* CSS cho Case Study trên mobile */
-@media (max-width: 767px) {
-  /* Container chính */
-  .case-study-container {
-    width: 100%;
-    height: auto;
-    padding: 20px 15px;
-    overflow: hidden; /* Ngăn scroll ngang */
-  }
-  
-  /* Giữ layout box_study theo chiều ngang nhưng thu nhỏ tỷ lệ */
-  .box_study {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    transform: scale(0.85); /* Thu nhỏ toàn bộ nội dung */
-    transform-origin: top left; /* Điểm gốc khi thu nhỏ */
-  }
-  
-  /* Điều chỉnh kích thước phần nội dung */
-  .case-study-content {
-    width: 45%;
-    padding-right: 10px;
-  }
-  
-  /* Điều chỉnh kích thước phần biểu đồ */
-  .chart-container {
-    width: 55%;
-  }
-  
-  /* Điều chỉnh font size và spacing */
-  .case-study-title {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-  
-  .industry-title {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .content-description {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  
-  /* Điều chỉnh goals-box */
-  .goals-box {
-    height: auto;
-    padding: 12px;
-    margin-top: 10px;
-  }
-  
-  .goals-title {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .goal-item {
-    padding: 5px;
-  }
-  
-  .goal-value {
-    font-size: 20px;
-    margin-top: 5px;
-  }
-  
-  .goal-value p {
-    font-size: 14px;
-  }
-  
-  .goal-description {
-    font-size: 10px;
-  }
-  
-  .progress-bar-container {
-    height: 40px;
-  }
-  
-  /* Điều chỉnh biểu đồ */
-  .chart-wrapper {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  canvas#caseChart {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 200px !important;
-    max-height: 200px !important;
-    margin: 0 auto;
-  }
-}
 
-/* CSS cho màn hình rất nhỏ */
-@media (max-width: 375px) {
-  .box_study {
-    transform: scale(0.75); /* Thu nhỏ hơn nữa cho màn hình rất nhỏ */
-  }
-  
-  .case-study-title {
-    font-size: 20px;
-  }
-  
-  .industry-title {
-    font-size: 14px;
-  }
-  
-  .content-description {
-    font-size: 11px;
-  }
-  
-  canvas#caseChart {
-    max-width: 180px !important;
-    max-height: 180px !important;
-  }
-}
+@media (max-width: 992px) {
+    .container-channels {
+        flex-direction: column;
+    }
 
-/* Responsive */
+    .channel-left,
+    .channel-right {
+        width: 100%;
+    }
+
+    .channel-image {
+        transform: none;
+    }
+    
+    #branding-detail,
+    #media-consulting,
+    .channel-wrapper {
+        padding: 20px;
+    }
+    
+    .channels-section .channel-title {
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .channel-offline h4 {
+        font-size: 28px;
+    }
+    
+    .channel-offline .item {
+        font-size: 16px;
+    }
+}

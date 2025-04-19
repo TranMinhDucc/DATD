@@ -25,15 +25,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     --bs-gutter-x: 0 !important;
-  }
-  
+}
+
 /* Filter Box */
 .filter-box {
     width: 257px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px;
-    height: 700px;
     border-radius: 10px;
 }
 
@@ -51,19 +50,24 @@ body {
     font-size: 14px;
     padding: 0;
 }
-
 .btn-category {
-    background-color: #ffc7ad;
     border-radius: 6px;
-    width: 183px;
     height: 38px;
     line-height: 38px;
     font-weight: 500;
-    text-align: center;
     color: #000;
-    margin-bottom: 8px;
+    margin: 0;
     text-decoration: none;
     display: block;
+    transition: all 0.3s ease;
+    width: calc(100% - 0px); /* Take full width minus padding */
+    font-size: 15px;
+}
+
+.btn-category:hover {
+    background-color: #ff9d6c;
+    text-decoration: none;
+    color: #000;
 }
 
 .filter-link {
@@ -92,6 +96,7 @@ body {
 .kol-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: translateY(-4px);
+    cursor: pointer;
 }
 
 /* Avatar Slider */
@@ -168,6 +173,123 @@ body {
     display: inline-block;
     white-space: nowrap;
 }
+/* Custom pagination without Bootstrap */
+.custom-pagination {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    font-family: "Inter", sans-serif;
+    justify-content: right;
+}
+
+.page-number {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.page-number:hover {
+    text-decoration: underline;
+}
+
+.page-number.current {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.page-next {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.page-next:hover {
+    text-decoration: underline;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+}
+/* Hide the default splide arrows */
+.splide__arrow svg {
+    display: none;
+}
+
+/* Style base for arrow buttons */
+.splide__arrow {
+    background-color: transparent !important;
+    width: 27px !important;
+    height: 13px !important;
+    opacity: 1 !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* Base styles for arrow buttons */
+.splide__arrow {
+    background-color: transparent !important;
+    width: 27px !important;
+    height: 13px !important;
+    opacity: 1 !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.splide__arrow--prev {
+    background-image: url('./images/client/prev/left.png') !important;
+}
+
+.splide__arrow--next {
+    background-image: url('./images/client/prev/right.png') !important;
+}
+.text-secondary {
+    color: #dddddd !important; /* Override the yellow color with gray */
+}
+/* Responsive adjustments for mobile */
+@media (max-width: 576px) {
+    .splide__arrow {
+        width: 20px !important;  /* Smaller width */
+        height: 10px !important; /* Smaller height */
+    }
+    
+    /* Adjust position if needed */
+    .avatar-slider .splide__arrow--prev {
+        left: 5px;
+    }
+    
+    .avatar-slider .splide__arrow--next {
+        right: 5px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .custom-pagination {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .page-number, .page-next {
+        font-size: 16px;
+    }
+    
+    .arrow-right {
+        width: 10px;
+        height: 10px;
+    }
+}
 
 /* Mobile */
 @media (max-width: 576px) {
@@ -224,7 +346,6 @@ body {
         padding: 4px 12px;
         box-shadow: 2px 2px 0 #ffd0af;
         transition: all 0.3s ease-in-out;
-
     }
 
     .kol-card:hover {
@@ -312,3 +433,69 @@ nav.pagination-wrapper {
     box-shadow: none;
 }
 
+/* Reset accordion styles */
+.accordion-button {
+    padding-left: 0; /* Remove left padding */
+}
+
+.accordion-body {
+    padding: 0; /* Remove all padding */
+}
+
+/* Menu item alignment */
+
+.accordion-body .btn-category {
+    padding-left: 35px; /* Consistent left padding for all items */
+    /* margin: 8px 0; */
+    display: block;
+    width: 100%; /* Full width */
+    text-align: left; /* Left align text */
+}
+.filter-link {
+    padding-left: 0;
+}
+/* Style for the category button */
+
+/* Menu accordion header */
+
+/* Remove focus outline */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Fix the arrow position */
+.accordion-button::after {
+    margin-left: auto; /* Push to right */
+}
+
+/* Fix for the vertical spacing */
+.filter-link {
+    margin: 8px 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* Remove default accordion padding */
+.accordion-item {
+    border: none;
+}
+
+/* Add margins for nested items */
+.mt-3 .filter-link {
+    padding-left: 0px;
+    font-size: 16px;
+}
+.accordion-button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Active/clicked accordion button style (gray) */
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important; /* Remove background when active */
+    color: #d9d9d9 !important; /* Gray text color when active */
+    border-radius: 0 !important;
+}

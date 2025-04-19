@@ -16,9 +16,11 @@ body {
 .logo-text {
     color: #ab6e6e;
 }
+
 .title_menu {
     font-size: 50px;
 }
+
 /* ====== NEWS SECTION ====== */
 .news-section {
     background-color: #ffa276;
@@ -72,8 +74,9 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
     transform: translateX(4px);
 }
+
 .news-content {
-    position: relative; /* cần thiết để nút định vị theo .news-content */
+    position: relative;
     background-color: white;
     border-radius: 13px;
     display: flex;
@@ -81,8 +84,9 @@ body {
     padding: 20px;
     gap: 20px;
     align-items: flex-start;
-    flex-wrap: wrap; /* để ảnh và text không bị chồng */
+    flex-wrap: wrap;
 }
+
 .news-img {
     width: 330px;
     height: 300px;
@@ -108,10 +112,6 @@ body {
     margin-bottom: 16px;
 }
 
-.btn-readmore:hover {
-    opacity: 1;
-}
-
 .container_kol {
     max-width: 1200px;
 }
@@ -124,10 +124,9 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
-
     padding: 10px 20px;
     background-color: #ffa276;
-    border: 1px solid #000;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 500;
@@ -140,7 +139,6 @@ body {
     gap: 6px;
     overflow: hidden;
 }
-
 
 .btn-readmore:hover {
     opacity: 1;
@@ -282,6 +280,10 @@ body {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+    .title_menu {
+        text-align: center;
+    }
+
     .news-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -317,8 +319,8 @@ body {
     .news-item {
         min-width: 200px;
         width: 200px;
-        white-space: nowrap; /* Không xuống dòng */
-        overflow: hidden; /* Ẩn phần vượt ra */
+        white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
         margin-right: 12px;
         text-align: center;
@@ -326,21 +328,20 @@ body {
     }
 
     .news-scroll-btn {
-        background-color: #ffa276;
         display: block;
+        background-color: #ffa276;
     }
+
     .news-carousel {
         width: 100%;
         align-items: center;
         display: flex;
         justify-content: space-around;
     }
-    .title_menu {
-        text-align: center;
-    }
+
     .btn-readmore {
         position: static !important;
         margin-top: 20px;
-        align-self: flex-start; /* hoặc center nếu muốn căn giữa */
-      }
+        align-self: flex-start;
+    }
 }

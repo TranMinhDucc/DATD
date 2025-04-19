@@ -14,7 +14,7 @@ body {
 }
 
 .title_about {
-    margin-left: 320px;
+    margin-left: 300px;
     font-size: 90px;
     padding: 30px 0;
 }
@@ -31,7 +31,6 @@ body {
     height: 386px;
     object-fit: cover;
 }
-
 
 .content_button_about {
     font-size: 16px;
@@ -58,7 +57,7 @@ body {
     font-family: "Iowan Old Style", Georgia, serif;
     flex: 1;
     max-width: 500px;
-  }
+}
 
 .slogan-desc {
     font-size: 36px;
@@ -70,6 +69,14 @@ body {
 .slogan-subtext {
     font-size: 15px;
     color: #c5a2a2;
+}
+
+.slogan-image img {
+    width: 606px;
+    height: 258px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 /* ====== TEAM SECTION (Splide) ====== */
@@ -158,6 +165,15 @@ body {
     color: white;
     border-color: #333;
 }
+
+.splide__arrow--prev {
+    left: -5em !important;
+}
+
+.splide__arrow--next {
+    right: -5em !important;
+}
+
 .offcanvas-title {
     font-weight: 600;
 }
@@ -168,43 +184,20 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.slogan-image img {
-    width: 606px;
-    height: 258px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-.splide__arrow--prev{
-    left: -5em !important;
-}
-.splide__arrow--next{
-    right: -5em !important;
-}
-@media (max-width: 768px) {
-    .slogan-image img,.about-us-img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
-        min-width: unset !important;
-        max-width: 100% !important;
-    }
-}
 /* ====== RESPONSIVE ====== */
 @media (min-width: 768px) {
     /* Splide slide spacing */
     .splide__slide {
-        padding: 0 5px; /* giảm padding slide để gần nhau hơn */
+        padding: 0 5px;
     }
 
-    /* Member rộng hơn (chiếm gần nửa màn hình) */
+    /* Member rộng hơn */
     .team-member {
         max-width: 83%;
         width: 100%;
     }
 
-    /* Đảm bảo team section không bị quá hẹp */
+    /* Team section spacing */
     .team-section .splide__track {
         padding-left: 0;
         padding-right: 0;
@@ -240,21 +233,27 @@ body {
     .slogan-content {
         flex-direction: column;
     }
-    .slogan-text,
-    .slogan-image img {
+
+    .slogan-text {
+        min-width: unset !important;
         max-width: 100%;
+        text-align: left;
     }
-    .slogan-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain; /* không cắt ảnh */
+
+    .slogan-image img,
+    .about-us-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        min-width: unset !important;
+        max-width: 100% !important;
     }
 
     .team-section {
         padding: 40px 20px;
     }
 
-    /* 👇 Đẩy nút Splide ra khỏi card member trên mobile */
+    /* Splide arrows on mobile */
     .splide__arrow--prev {
         left: -12px !important;
     }
@@ -262,9 +261,4 @@ body {
     .splide__arrow--next {
         right: -12px !important;
     }
-    .slogan-text {
-        min-width: unset !important;
-        max-width: 100%;
-        text-align: left;
-      }
 }
