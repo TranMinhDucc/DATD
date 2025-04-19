@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // === SplideJS Slider Khởi tạo ===
     new Splide("#news-slider", {
         type: "slide",
-        perPage: 5, // desktop
+        perPage: 5,
         gap: "24px",
         pagination: false,
         arrows: true,
@@ -9,48 +10,42 @@ document.addEventListener("DOMContentLoaded", function () {
             1200: { perPage: 4 },
             992: { perPage: 3 },
             768: { perPage: 2 },
-            576: { perPage: 1 }, // mobile 1 ảnh
+            576: { perPage: 1 },
         },
     }).mount();
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+    // === Đọc thêm / Thu gọn phần nội dung ===
     const toggleBtn = document.getElementById("toggleReadmore");
     const content = document.querySelector(".news-content");
 
-    const collapsedHeight = 100;
-    let isExpanded = false;
+    if (toggleBtn && content) {
+        const collapsedHeight = 100;
+        let isExpanded = false;
 
-    // Thiết lập transition cho hiệu ứng mượt
-    content.style.overflow = "hidden";
-    content.style.transition = "max-height 0.5s ease";
+        content.style.overflow = "hidden";
+        content.style.transition = "max-height 0.5s ease";
+        content.style.maxHeight = collapsedHeight + "px";
 
-    // Thiết lập chiều cao ban đầu
-    content.style.maxHeight = collapsedHeight + "px";
+        toggleBtn.addEventListener("click", function () {
+            if (isExpanded) {
+                content.style.maxHeight = collapsedHeight + "px";
+                content.classList.remove("expanded");
+                toggleBtn.innerText = "Đọc thêm";
+            } else {
+                const fullHeight = content.scrollHeight;
+                content.style.maxHeight = fullHeight + "px";
+                content.classList.add("expanded");
+                toggleBtn.innerText = "Thu gọn";
+                content.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
 
-    toggleBtn.addEventListener("click", function () {
-        if (isExpanded) {
-            // Thu gọn
-            content.style.maxHeight = collapsedHeight + "px";
-            content.classList.remove("expanded");
-            toggleBtn.innerText = "Đọc thêm";
-        } else {
-            // Tính lại chiều cao thật sự mỗi lần mở
-            const fullHeight = content.scrollHeight;
-            content.style.maxHeight = fullHeight + "px";
-            content.classList.add("expanded");
-            toggleBtn.innerText = "Thu gọn";
+            isExpanded = !isExpanded;
+        });
 
-            // Scroll nhẹ lên đầu phần nội dung
-            content.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-
-        isExpanded = !isExpanded;
-    });
-
-    // Khi resize, cập nhật lại max-height nếu đang mở rộng
-    window.addEventListener("resize", function () {
-        if (isExpanded) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
+        window.addEventListener("resize", function () {
+            if (isExpanded) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 });

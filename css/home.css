@@ -92,6 +92,12 @@
     justify-content: center; /* căn giữa nội dung theo chiều dọc */
     border: 1px solid #dee2e6; /* optional: nếu bạn muốn có viền */
 }
+.service-card:hover {
+    cursor: pointer;
+    background-color: #ffa276;
+    transform: translateY(-4px);
+    border-color: transparent;
+}
 
 @media (max-width: 768px) {
     .splide__arrow--prev {

@@ -303,12 +303,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.service-card:hover {
-    cursor: pointer;
-    background-color: #ffa276;
-    transform: translateY(-4px);
-    border-color: transparent;
-}
 
 .service-card:hover h5,
 .service-card:hover p,

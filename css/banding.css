@@ -86,10 +86,12 @@
 /* Hover Effect */
 .service-card:hover {
     transform: scale(1.2);
+  
 }
 
 .service-card:hover img {
     filter: brightness(110%);
+    opacity: 1;
 }
 
 .branding-section {
@@ -243,6 +245,7 @@
 }
 
 .container-channels {
+    position: relative;
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -297,11 +300,22 @@
     position: relative;
 }
 
+.channel-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .channel-image img {
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 599px;
-    height: 401px;
+    right: 0;
+
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
 }
@@ -318,7 +332,8 @@
 }
 
 .navigate-link.arrow_consulting {
-    bottom: 0;
+   
+    bottom: 18px;
     left: 0;
     font-size: 13px;
     font-weight: 600;
@@ -374,7 +389,7 @@ canvas#caseChart {
 }
 
 .case-study-container {
-    height: 600px;
+    height: 620px;
     background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
     padding: 30px;
     position: relative;
@@ -437,7 +452,7 @@ canvas#caseChart {
     color: white;
     border-radius: 15px;
     padding: 25px;
-    height: 230px;
+    height: 270px;
     position: relative;
     z-index: 1;
 }
@@ -544,7 +559,8 @@ canvas#caseChart {
 
 .about-us-img {
     margin-top: 40px;
-    width: 100%;
+    /* width: 100%; */
+    max-width: 1200px;
     display: block;
     height: 386px;
     object-fit: cover;
@@ -557,28 +573,28 @@ canvas#caseChart {
     .case-study-container {
         min-height: 750px;
     }
-    
+
     .case-study-title {
         font-size: 24px;
     }
-    
+
     .industry-title {
         font-size: 16px;
     }
-    
+
     .content-description {
         font-size: 12px;
     }
-    
+
     .goals-box {
         width: 95%;
         padding: 15px;
     }
-    
+
     .chart-wrapper {
         max-width: 280px;
     }
-    
+
     canvas#caseChart {
         max-width: 250px !important;
         max-height: 250px !important;
@@ -608,6 +624,187 @@ canvas#caseChart {
         max-height: 250px !important;
     }
 }
+/* Style for the individual goal item */
+.goal-item {
+    position: relative;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Progress bar container styling */
+.progress-bar-container {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 12px;
+    height: 120px;
+    background-color: #4db6ff; /* Light blue color */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Dark blue cap at the top of progress bar */
+.progress-bar-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #061d4a; /* Dark blue/navy color */
+    border-radius: 6px 6px 0 0;
+}
+
+/* Remove the actual progress bar div since we're using the container as the bar */
+.progress-bar {
+    display: none;
+}
+
+/* Goal value (2000) styling */
+.goal-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 40px; /* Space for the progress bar */
+    padding-top: 5px;
+}
+
+/* "khách hàng" text styling */
+.goal-value p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Description text styling */
+.goal-description {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 15px;
+    margin-left: 40px; /* Align with the number above */
+}
+/* Fix for the centered layout of the Media Services section */
+.media-services {
+    padding: 60px 0; /* Remove horizontal padding */
+    background-color: #fff;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Center the container properly */
+.media-services .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    width: 100%;
+    display: block;
+}
+
+/* Service grid centered alignment */
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Center the cards */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Adjusted card sizing for better fit */
+.service-card {
+    position: relative;
+    width: calc(33.333% - 20px); /* Adjust for gap */
+    max-width: 340px;
+    height: 480px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.strategic-image img {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    max-width: 1200px;
+    width: 580px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+/* Standard desktop position (right aligned) */
+.navigate-link.arrow_consulting {
+    margin-top: 20px;
+    bottom: 18px;
+    left: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    float: right; /* Right alignment for desktop */
+}
+
+/* Mobile specific positioning (left aligned) */
+@media (max-width: 767px) {
+    .media-section .navigate-link.arrow_consulting {
+        float: left !important; /* Override to float left on mobile */
+        text-align: left;
+        display: block;
+        width: auto;
+        margin-top: 20px;
+        position: relative; /* Override absolute positioning if any */
+        bottom: auto;
+        left: auto;
+    }
+    
+    /* Ensure proper container positioning */
+    .media-text {
+        position: relative;
+        padding-bottom: 50px; /* Make space for the link if needed */
+    }
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 992px) {
+    .service-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .service-grid {
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .goal-value {
+        font-size: 2.8rem;
+    }
+
+    .goal-value p {
+        font-size: 1.1rem;
+    }
+
+    .progress-bar-container {
+        height: 70px;
+    }
+}
 
 /* CSS for mobile case study */
 @media (max-width: 767px) {
@@ -621,6 +818,9 @@ canvas#caseChart {
         padding-right: 15px;
         width: 100%;
     }
+    .navigate-link.arrow_consulting{
+        bottom: 0;
+    }
 
     /* Case study container */
     .case-study-container {
@@ -630,7 +830,7 @@ canvas#caseChart {
         padding: 20px 15px;
         overflow: hidden;
     }
-    
+
     .box_study {
         display: flex;
         flex-direction: column;
@@ -639,32 +839,32 @@ canvas#caseChart {
         transform: none;
         margin: 0 auto;
     }
-    
+
     .case-study-content {
         width: 100%;
         padding-right: 0;
         margin-bottom: 30px;
         text-align: center;
     }
-    
+
     .chart-container {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    
+
     .case-study-title {
         font-size: 28px;
         margin-bottom: 10px;
         text-align: center;
     }
-    
+
     .industry-title {
         font-size: 18px;
         margin-bottom: 10px;
         text-align: center;
     }
-    
+
     .content-description {
         font-size: 14px;
         margin-bottom: 15px;
@@ -673,47 +873,47 @@ canvas#caseChart {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .goals-box {
         height: auto;
         padding: 20px;
         margin: 0 auto;
         width: 90%;
     }
-    
+
     .goals-title {
         font-size: 18px;
         margin-bottom: 15px;
     }
-    
+
     .goal-item {
         padding: 5px;
     }
-    
+
     .goal-value {
         font-size: 24px;
         margin-top: 5px;
     }
-    
+
     .goal-value p {
         font-size: 16px;
     }
-    
+
     .goal-description {
         font-size: 12px;
     }
-    
+
     .chart-wrapper {
         padding: 0;
         margin: 0 auto;
         width: 90%;
         max-width: 350px;
     }
-    
+
     canvas#caseChart {
         width: 100% !important;
         height: auto !important;
-        max-width: 300px !important; 
+        max-width: 300px !important;
         max-height: 300px !important;
         margin: 0 auto;
     }
@@ -793,9 +993,15 @@ canvas#caseChart {
     }
 
     .channel-image img {
+        right: 0;
+        top: -50px;
         position: relative;
         width: 100%;
         height: auto;
+    }
+
+    .container-channels {
+        gap: 0;
     }
 
     /* Mobile sidebar menu styling */
@@ -839,8 +1045,8 @@ canvas#caseChart {
     .branding-title,
     .media-title,
     .channel-title {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 48px;
+        margin-bottom: 35px;
     }
 
     /* Fix for channels section */
@@ -903,10 +1109,9 @@ canvas#caseChart {
         align-items: center;
     }
 
-    .branding-title {
-        font-size: 36px;
-        text-align: left;
-    }
+.service-card{
+    padding: 17px;
+}
 
     .branding-text {
         text-align: left;
@@ -928,25 +1133,36 @@ canvas#caseChart {
         width: 100%;
     }
 
+    .channel-left {
+        padding-bottom: 0;
+    }
+    .channel-right {
+        margin-bottom: 25px;
+    }
+    .container-channels {
+        gap: 0px;
+    }
+
     .channel-image {
         transform: none;
+        margin-bottom: 0;
     }
-    
+
     #branding-detail,
     #media-consulting,
     .channel-wrapper {
         padding: 20px;
     }
-    
+
     .channels-section .channel-title {
         text-align: center;
         font-size: 50px;
     }
-    
+
     .channel-offline h4 {
         font-size: 28px;
     }
-    
+
     .channel-offline .item {
         font-size: 16px;
     }
